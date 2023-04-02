@@ -6,8 +6,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coding Chanllenge</title>
     <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    rel="stylesheet"
+  />
+  <style>
+    .menu-el {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600 !important;
+      line-height: inherit;
+      height: 90%;
+    }
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+    .tab {
+      font-size: 0.875rem;
+      font-weight: 400;
+    }
+    .tab.active {
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-color: #8263eb;
+      color: #8263eb;
+    }
+    .critereas {
+      display: flex;
+      gap: 1.575rem;
+    }
+    .criterea {
+      display: flex;
+      gap: 0.375rem;
+      align-items: center;
+      font-size: 500;
+      font-size: 0.875rem;
+    }
+    .actions-btns {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.875rem;
+    }
+    .actions-btns button {
+      border-radius: 7px/7px;
+    }
+  </style>
 </head>
 <body>
+
+    <!-- component -->
+    <header
+      class="flex items-center justify-between flex-wrap bg-gray-50 pt-4 lg:px-12"
+    >
+      <div class="" style="width: 100%">
+        <div
+          class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto pb-4 border-solid border-gray-300"
+          style="border-bottom-width: 0.5px"
+        >
+          <div
+            class="flex justify-between lg:hidden lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-1 border-gray-300 pb-5 lg:pb-0"
+          >
+            <div class="block lg:hidden">
+              <button
+                id="nav"
+                class="flex items-center px-3 py-2 border-2 rounded"
+              >
+                <svg
+                  class="fill-current h-3 w-3"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Menu</title>
+                  <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            class="font-bold lg:flex-grow flex gap-1"
+            style="align-items: center"
+          >
+            <div class="flex items-center flex-shrink-0 text-gray-700 mr-8">
+              <img
+                src="./assets/logoTest.JPG"
+                width="44px"
+                class="block rounded-full sm:mx-0 sm:shrink-0 object-cover rounded-full"
+              />
+            </div>
+
+            <a
+              href="#responsive-header"
+              class="menu-el block mt-4 lg:inline-block lg:mt-0 px-3 leading-3 text-sm py-1 rounded mr-2 bg-slate-200"
+            >
+              Dashboard
+            </a>
+            <a
+              href="#responsive-header"
+              class="menu-el block mt-4 lg:inline-block lg:mt-0 px-3 leading-3 text-sm py-1 rounded mr-2"
+            >
+              Jobs
+            </a>
+            <a
+              href="#responsive-header"
+              class="menu-el block mt-4 lg:inline-block lg:mt-0 px-3 leading-3 text-sm py-1 rounded mr-2"
+            >
+              Applicants
+            </a>
+            <a
+              href="#responsive-header"
+              class="menu-el block mt-4 lg:inline-block lg:mt-0 px-3 leading-3 text-sm py-1 rounded mr-2"
+            >
+              Company
+            </a>
+          </div>
+          <!-- This is an example component -->
+          <div class="relative mx-auto text-gray-600 lg:block hidden mr-7">
+            <input
+              class="border-2 border-gray-300 bg-white h-10 pl-4 pr-8 rounded-lg text-sm focus:outline-none"
+              type="search"
+              name="search"
+              placeholder="&#xF002;  Search"
+              style="font-family: Arial, FontAwesome"
+            />
+          </div>
+          <div class="flex gap-5">
+            <div class="relative">
+              <div class="pt-2" style="padding-top: 0.405rem">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  class="text-gray-600 w-4 h-4"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="flex items-center flex-shrink-0 text-gray-800 ml-auto">
+              <img
+                src="./assets/alexander-hipp-iEEBWgY_6lA-unsplash.jpg"
+                width="32px"
+                class="block rounded-full sm:mx-0 sm:shrink-0 object-cover rounded-full"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
     
 </body>
 </html>
